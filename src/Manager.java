@@ -56,10 +56,17 @@ public class Manager {
             System.out.println("Could not read files " + filePath.getFileName());
             e.printStackTrace();
         }
+        return data;
+    }
+
+        public void printLines(){
+            for (String line : contactData) {
+                System.out.println(line);
+            }
+        }
 
 
 
         // readAllLines -> returns a List<String>
-        return data;
-    }
+
 }
