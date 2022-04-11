@@ -1,6 +1,8 @@
 package src;
 
 public class Main {
-    //Testing 1 2 3
+    public static void main(String[] args) {
+
+    }
 
 }
