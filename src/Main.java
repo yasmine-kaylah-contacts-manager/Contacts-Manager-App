@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Main {
 
-    static void main(String args[]) throws IOException {
+    public static void main(String args[]) throws IOException {
 
         while (true) {
             int userChoice = Manager.startMenu();
