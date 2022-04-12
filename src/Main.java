@@ -2,7 +2,7 @@ package src;
 
 import java.io.IOException;
 
-public interface Main {
+public class Main {
 
     static void main(String args[]) throws IOException {
 
