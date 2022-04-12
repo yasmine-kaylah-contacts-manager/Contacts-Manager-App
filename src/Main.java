@@ -12,7 +12,8 @@ public interface Main {
                 Manager.printList();
             else if (userChoice == 2)
                 Manager.addPerson();
-            //Search
+            else if(userChoice == 3)
+                Manager.searchByName();
             //Delete Contact
             else if (userChoice == 5) {
                 Manager.exit();

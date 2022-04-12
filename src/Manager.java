@@ -2,6 +2,7 @@ package src;
 
 import com.sun.source.tree.ClassTree;
 
+import javax.sound.sampled.Line;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -117,6 +118,27 @@ public class Manager {
         }
         return data;
     }
+    public static void searchByName() {
+        System.out.println("3. Retrieve contacts by name. ");
+        System.out.print(" Name: ");
+        Scanner myScanner = new Scanner(System.in);
+        String searchedByName = myScanner.nextLine();
+        Path ContactsPath = Paths.get("data", "contacts.txt");
+        List<String> Personlist;
+        try {
+            Personlist = Files.readAllLines(ContactsPath);
+            for (String person : Personlist) {
+                if (person.toLowerCase().contains(searchedByName.toLowerCase())) {
+                    System.out.println("Contact:\n" + person);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("-----------------------------");
+        System.out.println("Redirecting to the Main Menu");
+    }
+
 
         public void printLines(){
             for (String line : contactData) {
@@ -124,7 +146,7 @@ public class Manager {
             }
         }
 public static void exit(){
-    System.out.println("Thanks for using Contacts Manager! Hope to see you soon.");
+    System.out.println("Thanks for using Contacts Manager! Hope to see you soon. \n*\n***\n*****");
     System.exit(0);
 }
 
